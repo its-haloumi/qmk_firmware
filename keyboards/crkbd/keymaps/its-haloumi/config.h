@@ -24,17 +24,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Select hand configuration */
 
-#define MASTER_LEFT
-// #define MASTER_RIGHT
+//#define MASTER_LEFT
+#define MASTER_RIGHT
 // #define EE_HANDS
 
 #define USE_SERIAL_PD2
 
-#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 200
+#undef TAPPING_TERM
+#define TAPPING_TERM 180
 
 // Prevent normal rollover on alphas from accidentally triggering mods
 #define IGNORE_MOD_TAP_INTERRUPT
+
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define TAPPING_FORCE_HOLD
+
+// Auto Shift
+//#define NO_AUTO_SHIFT_ALPHA
+//#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
+//#define AUTO_SHIFT_NO_SETUP
 
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
@@ -86,17 +94,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#    define ENABLE_RGB_MATRIX_DUAL_BEACON
 //#    define ENABLE_RGB_MATRIX_RAINBOW_BEACON
 //#    define ENABLE_RGB_MATRIX_RAINBOW_PINWHEELS
-#    define ENABLE_RGB_MATRIX_RAINDROPS
-#    define ENABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
+//#    define ENABLE_RGB_MATRIX_RAINDROPS
+//#    define ENABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
 #    define ENABLE_RGB_MATRIX_HUE_BREATHING
-#    define ENABLE_RGB_MATRIX_HUE_PENDULUM
-#    define ENABLE_RGB_MATRIX_HUE_WAVE
-#    define ENABLE_RGB_MATRIX_PIXEL_RAIN
+//#    define ENABLE_RGB_MATRIX_HUE_PENDULUM
+//#    define ENABLE_RGB_MATRIX_HUE_WAVE
+//#    define ENABLE_RGB_MATRIX_PIXEL_RAIN
 #    define ENABLE_RGB_MATRIX_PIXEL_FLOW
 #    define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
 // enabled only if RGB_MATRIX_FRAMEBUFFER_EFFECTS is defined
-#    define ENABLE_RGB_MATRIX_TYPING_HEATMAP
-#    define ENABLE_RGB_MATRIX_DIGITAL_RAIN
+//#    define ENABLE_RGB_MATRIX_TYPING_HEATMAP
+//#    define ENABLE_RGB_MATRIX_DIGITAL_RAIN
 // enabled only of RGB_MATRIX_KEYPRESSES or RGB_MATRIX_KEYRELEASES is defined
 #    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
 #    define ENABLE_RGB_MATRIX_SOLID_REACTIVE
